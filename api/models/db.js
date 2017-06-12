@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-require('./card');
+require('./deck');
 
 const dbURI = 'mongodb://localhost/royale';
 if (process.env.NODE_ENV === 'production')

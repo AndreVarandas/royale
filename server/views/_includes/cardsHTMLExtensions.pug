@@ -5,7 +5,7 @@ mixin renderCardsCollection(cards)
             div.image
               img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png')
             div.content
-              a.header=card.name
+              a(href='/api/v1/cards/' + card.idName).header=card.name
               div.meta
                 span.date=card.type
               div.description= card.description
