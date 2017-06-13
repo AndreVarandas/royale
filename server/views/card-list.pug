@@ -1,0 +1,9 @@
+extends layout
+
+include _includes/cardsHTMLExtensions
+
+block content
+  div.ui.grid.centered.title
+    h2 Card Listing
+  div.ui.doubling.stackable.grid.container
+    +renderCardsCollection(cards)

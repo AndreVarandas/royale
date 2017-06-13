@@ -1,9 +1,79 @@
-body
-  padding: 50px
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+@import variables
 
-a
-  color: #00B7FF
+/* General styles */
+@font-face
+  font-family: 'Supercell-magic-webfont'
+  src: url('./fonts/Supercell-magic-webfont.ttf')
+
+html, body
+  background-color: #f1f1f1
+
+h1, h2, h3, h4, h5, h6,
+  font-family: $brand-font
+
+.title
+  margin: 2em 0 !important
+
+/* Nav */
+.ui.secondary.pointing.menu
+  background-color: $main-color
+
+.ui.secondary.pointing.menu
+  font-family: $brand-font
+
+/* Card layout */
+.ui.card>.image, .ui.cards>.card>.image
+  background-color: transparent
+
+.card-name
+  font-family: $brand-font
+  margin-bottom: 1em !important
+  a
+    color: black
+
+.card-options
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end
 
 .small.text
   font-size: 0.75em
+
+.card-image-container
+  text-align: center
+
+.card-image
+  max-width: 45%
+  margin: auto
+
+.card-image:hover
+  transform: scale(1.2);
+  transition: transform 1s cubic-bezier(1, -0.45, 0.15, 1.15);
+
+.ui.card>.content>.header+.description, .ui.card>.content>.meta+.description, .ui.cards>.card>.content>.header+.description, .ui.cards>.card>.content>.meta+.description
+  color: $secondary-font-color
+
+/* Icons */
+.elixir
+  background-image: url('/images/Elixir.png')
+  background-size: cover
+  padding: 10px
+
+.cards
+  background-image: url('/images/Cards.png')
+  background-size: cover
+  padding: 20px
+
+.icon
+  font-family: $secondary-font
+
+.content-detail
+  margin-top: 0.50em
+  .detail-label
+    vertical-align: top
+    font-family: $brand-font
+
+/* Footer */
+footer.footer
+  font-family: $brand-font
+  color: $secondary-font-color

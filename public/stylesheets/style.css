@@ -1,11 +1,79 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+/* General styles */
+@font-face {
+  font-family: 'Supercell-magic-webfont';
+  src: url("./fonts/Supercell-magic-webfont.ttf"); }
 
-a {
-  color: #00B7FF; }
+html, body {
+  background-color: #f1f1f1; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Supercell-magic-webfont", "Georgia", serif !important; }
+
+.title {
+  margin: 2em 0 !important; }
+
+/* Nav */
+.ui.secondary.pointing.menu {
+  background-color: #488bf4; }
+
+.ui.secondary.pointing.menu {
+  font-family: "Supercell-magic-webfont", "Georgia", serif !important; }
+
+/* Card layout */
+.ui.card > .image, .ui.cards > .card > .image {
+  background-color: transparent; }
+
+.card-name {
+  font-family: "Supercell-magic-webfont", "Georgia", serif !important;
+  margin-bottom: 1em !important; }
+  .card-name a {
+    color: black; }
+
+.card-options {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end; }
 
 .small.text {
   font-size: 0.75em; }
+
+.card-image-container {
+  text-align: center; }
+
+.card-image {
+  max-width: 45%;
+  margin: auto; }
+
+.card-image:hover {
+  transform: scale(1.2);
+  transition: transform 1s cubic-bezier(1, -0.45, 0.15, 1.15); }
+
+.ui.card > .content > .header + .description, .ui.card > .content > .meta + .description, .ui.cards > .card > .content > .header + .description, .ui.cards > .card > .content > .meta + .description {
+  color: #858585; }
+
+/* Icons */
+.elixir {
+  background-image: url("/images/Elixir.png");
+  background-size: cover;
+  padding: 10px; }
+
+.cards {
+  background-image: url("/images/Cards.png");
+  background-size: cover;
+  padding: 20px; }
+
+.icon {
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+.content-detail {
+  margin-top: 0.50em; }
+  .content-detail .detail-label {
+    vertical-align: top;
+    font-family: "Supercell-magic-webfont", "Georgia", serif !important; }
+
+/* Footer */
+footer.footer {
+  font-family: "Supercell-magic-webfont", "Georgia", serif !important;
+  color: #858585; }
 
 /*# sourceMappingURL=style.css.map */
