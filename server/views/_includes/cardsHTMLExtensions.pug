@@ -3,6 +3,17 @@ mixin renderCardsCollection(cards)
     div.four.wide.column
       +renderCard(card)
 
+
+mixin createPagination(pages)
+  div.content.row
+    div.ui.pagination.menu
+      - for (var i = 0; i < pages.total; ++i) {
+        a(class=(pages.currentPage === i ? 'active item' : 'item'),
+          href=`/cards?page=${i}&limit=${pages.limit}`
+          )= i+1
+      - }
+
+
 mixin renderCard(card)
   div.ui.card
     div.content
