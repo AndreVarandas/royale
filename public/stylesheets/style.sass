@@ -7,6 +7,7 @@
 
 html, body
   background-color: #f1f1f1
+  color $main-color
 
 h1, h2, h3, h4, h5, h6,
   font-family: $brand-font
@@ -23,6 +24,7 @@ h1, h2, h3, h4, h5, h6,
 
 footer.footer
   font-family: $brand-font
+  font-size: 0.75em
   color: $main-font-color
   padding: 20px !important
   margin: 1em 0 !important
@@ -69,12 +71,17 @@ footer > p.small,
   max-width: 45%
   margin: auto
 
-.card-image:hover
+.card-image-detail
+  max-width: 65%
+  margin: auto
+
+.card-image:hover,
+.card-image-detail:hover
   transform: scale(1.2);
   transition: transform 1s cubic-bezier(1, -0.45, 0.15, 1.15);
 
-.ui.card>.content>.header+.description, .ui.card>.content>.meta+.description, .ui.cards>.card>.content>.header+.description, .ui.cards>.card>.content>.meta+.description
-  color: $secondary-font-color
+.card-info-name
+  color: $main-font-color
 
 /* Icons */
 .elixir
@@ -82,16 +89,18 @@ footer > p.small,
   background-size: cover
   padding: 10px
 
-.cards
-  background-image: url('/images/Cards.png')
-  background-size: cover
-  padding: 20px
+.elixir.icon.card-detail
+  margin: 0 10px -3px 10px
+
+.add.circle.icon.button
+  color: #cd14d9
+  font-size: 1.5em
 
 .icon
   font-family: $secondary-font
 
 .content-detail
-  margin-top: 0.50em
+  margin: 1em 0
   .detail-label
     vertical-align: top
     font-family: $brand-font
@@ -143,6 +152,29 @@ footer > p.small,
 .background-image-text.text.short
   top: 110px
 
-.decks
+.arena
   background-image: url('/images/arena2.jpg')
   background-size: cover
+
+.camp
+  background-image: url('/images/arena4.jpg')
+  background-size: cover
+
+.league
+  background-image: url('/images/arena3.jpg')
+  background-size: cover
+
+.chests
+  background-image: url('/images/arena5.jpg')
+  background-size: cover
+
+.players
+  background-image: url('/images/arena7.jpg')
+  background-size: cover
+
+/* Utils */
+.text-faded
+  color: $secondary-font-color
+
+.pushup
+  margin-top: -60px !important

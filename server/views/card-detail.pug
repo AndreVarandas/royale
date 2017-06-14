@@ -3,6 +3,11 @@ extends layout
 include _includes/cardsHTMLExtensions
 
 block content
-  div.container
-    div.twelve.wide.column.centered
+  div.background.camp
+    div.blur
+  h1.background-image-text.title= pageHeader.subtitle
+  h4.background-image-text.text= pageHeader.title
+
+  div.container.ui.row
+    div.ui.segment.pushup
       +renderCardWithDetail(card)

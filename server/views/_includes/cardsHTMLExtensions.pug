@@ -20,7 +20,7 @@ mixin renderCard(card)
       div.header.ui.center.aligned.grid.card-name
         a(href='/cards/' + card.idName)=card.name
     div.image.card-image-container
-      a(href='/cards/' + card.idName)
+      a(href='/cards/' + card.idName, title='Details')
         img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png').card-image
     div.content-detail
       div.ui.grid
@@ -29,7 +29,7 @@ mixin renderCard(card)
           span.detail-label x #{card.elixirCost}
         div.seven.wide.column.card-options
           a(title='Add to deck').right.aligned
-            i.cards.icon
+            i.add.circle.icon.button
     div.extra.content
       span.left.floated
         a(title='Vote up')
@@ -42,30 +42,49 @@ mixin renderCard(card)
 
 
 mixin renderCardWithDetail(card)
-  div.ui.card
-    div.image
-      img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png')
-    div.content
-      div.header.ui.center.aligned.grid.card-name
-        a(href='/cards/' + card.idName)=card.name
-      div.content-detail
-        div.ui.grid
-          div.seven.wide.column.card-options
-            i.elixir.icon
-            span.detail-label x #{card.elixirCost}
-          div.seven.wide.column.card-options
-            a(title='Add to deck').right.aligned
-              i.cards.icon
-      div.meta
-        span.date=card.type
-      div.description= card.description
-    div.extra.content
-      div.ui.grid.doubling.stackable
-        a(title='Rarity').five.wide.column.small.text
-          i.empty.star.icon
-          =card.rarity
-        a(title='Elixir Cost').five.wide.column
-          i.money.icon
-          =card.elixirCost
-        a(title='Arena').five.wide.column
-          i.ticket.icon
+  div.ui.grid.stackable
+    div.four.wide.column
+      img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png', class='card-image-detail')
+    div.twelve.wide.column
+      h2.card-info-name= card.name
+      div.content.ui.grid
+        div.five.column.row
+          div.left.floated.column
+            p.text-faded= `${card.type} - ${card.rarity}`
+          div.right.floated.column
+            p.text-faded Cost: #{card.elixirCost}
+              i.elixir.icon.card-detail
+      div.content.ui.grid
+        h5.twelve.wide.column Description:
+        p= card.description
+
+
+
+//- mixin renderCardWithDetail(card)
+//-   div.ui.card
+//-     div.image
+//-       img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png')
+//-     div.content
+//-       div.header.ui.center.aligned.grid.card-name
+//-         a(href='/cards/' + card.idName)=card.name
+//-       div.content-detail
+//-         div.ui.grid
+//-           div.seven.wide.column.card-options
+//-             i.elixir.icon
+//-             span.detail-label x #{card.elixirCost}
+//-           div.seven.wide.column.card-options
+//-             a(title='Add to deck').right.aligned
+//-               i.cards.icon
+//-       div.meta
+//-         span.date=card.type
+//-       div.description= card.description
+//-     div.extra.content
+//-       div.ui.grid.doubling.stackable
+//-         a(title='Rarity').five.wide.column.small.text
+//-           i.empty.star.icon
+//-           =card.rarity
+//-         a(title='Elixir Cost').five.wide.column
+//-           i.money.icon
+//-           =card.elixirCost
+//-         a(title='Arena').five.wide.column
+//-           i.ticket.icon

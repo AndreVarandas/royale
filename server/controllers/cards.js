@@ -21,7 +21,8 @@ module.exports.getOneCard = (req, res, next) => {
         res.render('card-detail', {
           card: response.data,
           pageHeader: {
-            title: 'Card List',
+            title: 'Card Info',
+            subtitle: response.data.name
           }
         });
       });
