@@ -3,8 +3,13 @@ extends layout
 include _includes/cardsHTMLExtensions
 
 block content
-  div.ui.grid.centered.title
-    h2 Card Listing
+  div.background.short.decks
+    div.blur
+  h1.background-image-text.title.short= pageHeader.title
+  h2.background-image-text.text.short= pageHeader.subtitle
+
+  div.title
+
   div.ui.doubling.stackable.grid.container
     +renderCardsCollection(cards)
 

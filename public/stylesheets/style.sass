@@ -15,6 +15,9 @@ h1, h2, h3, h4, h5, h6,
   margin: 2em 0 !important
 
 /* Nav */
+.ui.secondary.pointing.menu
+  margin-bottom: 0
+
 .ui.secondary.pointing.menu a.item
   color: white
 
@@ -84,3 +87,53 @@ h1, h2, h3, h4, h5, h6,
 footer.footer
   font-family: $brand-font
   color: $secondary-font-color
+
+/* Decks */
+.background
+  width: 100vw
+  height: 300px
+  position: relative
+
+.background.short
+  width: 100vw
+  height: $short-background-height
+  position: relative
+
+.background > .blur
+  position: absolute
+  width: 100vw
+  height: 300px
+  filter: blur(20px)
+  background-color: rgba(0, 0, 0, 0.25)
+  transition: background-color, 1s ease-out
+
+.background.short > .blur
+  height: $short-background-height
+
+.background > .blur:hover
+  filter: blur(10)
+  background-color: transparent
+  transition: all 1s ease-out
+
+.background-image-text
+  position: absolute
+  left: 0
+  width: 100%
+  text-align: center
+  color: $secondary-color
+
+.background-image-text.title
+  top: 50px
+
+.background-image-text.text
+  top: 150px
+
+.background-image-text.title.short
+  top: 25px
+
+.background-image-text.text.short
+  top: 110px
+
+.decks
+  background-image: url('/images/arena2.jpg')
+  background-size: cover

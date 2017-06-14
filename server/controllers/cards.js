@@ -5,7 +5,10 @@ module.exports.getAllCards = (req, res, next) => {
   trae.get(`${config.baseLocalURL}/cards?page=${req.query.page}&limit=${req.query.limit}`)
     .then((response) => {
       res.render('card-list', {
-        title: 'Card List',
+        pageHeader: {
+          title: 'Card List',
+          subtitle: 'See all the cards!'
+        },
         cards: response.data.cards,
         pages: response.data.pages
       });
