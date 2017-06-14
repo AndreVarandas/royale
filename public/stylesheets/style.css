@@ -10,8 +10,25 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Supercell-magic-webfont", "Georgia", serif !important; }
 
+.main {
+  display: flex;
+  flex-direction: column; }
+
+.main-content {
+  flex: 1 0 auto; }
+
 .title {
   margin: 2em 0 !important; }
+
+footer.footer {
+  font-family: "Supercell-magic-webfont", "Georgia", serif !important;
+  color: #363636;
+  padding: 20px !important;
+  margin: 1em 0 !important; }
+
+footer > p.small {
+  color: #858585;
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif; }
 
 /* Nav */
 .ui.secondary.pointing.menu {
@@ -78,14 +95,7 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: top;
     font-family: "Supercell-magic-webfont", "Georgia", serif !important; }
 
-/* Footer */
-footer.footer {
-  font-family: "Supercell-magic-webfont", "Georgia", serif !important;
-  color: #858585;
-  padding: 20px !important;
-  margin: 1em 0 !important; }
-
-/* Decks */
+/* Background Styling */
 .background {
   width: 100vw;
   height: 300px;
@@ -135,12 +145,5 @@ footer.footer {
 .decks {
   background-image: url("/images/arena2.jpg");
   background-size: cover; }
-
-.main {
-  display: flex;
-  flex-direction: column; }
-
-.main-content {
-  flex: 1 0 auto; }
 
 /*# sourceMappingURL=style.css.map */
