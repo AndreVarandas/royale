@@ -11,25 +11,34 @@ html, body
 h1, h2, h3, h4, h5, h6,
   font-family: $brand-font
 
+.main
+  display: flex
+  flex-direction: column
+
+.main-content
+  flex: 1 0 auto
+
 .title
   margin: 2em 0 !important
+
+footer.footer
+  font-family: $brand-font
+  color: $secondary-font-color
+  padding: 20px !important
+  margin: 1em 0 !important
 
 /* Nav */
 .ui.secondary.pointing.menu
   margin-bottom: 0
+  text-shadow: 1px 1px #343033
+  background-color: $main-color
+  font-family: $brand-font
 
 .ui.secondary.pointing.menu a.item
   color: white
 
 .ui.secondary.pointing.menu a.item:hover
   color: $secondary-color
-
-.ui.secondary.pointing.menu
-  background-color: $main-color
-  border-bottom: 2px solid #afafaf
-
-.ui.secondary.pointing.menu
-  font-family: $brand-font
 
 /* Card layout */
 .ui.card>.image, .ui.cards>.card>.image
@@ -83,12 +92,7 @@ h1, h2, h3, h4, h5, h6,
     vertical-align: top
     font-family: $brand-font
 
-/* Footer */
-footer.footer
-  font-family: $brand-font
-  color: $secondary-font-color
-
-/* Decks */
+/* Background Styling */
 .background
   width: 100vw
   height: 300px
@@ -121,6 +125,7 @@ footer.footer
   width: 100%
   text-align: center
   color: $secondary-color
+  text-shadow: 2px 2px #343033
 
 .background-image-text.title
   top: 50px

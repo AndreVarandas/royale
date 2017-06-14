@@ -15,20 +15,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Nav */
 .ui.secondary.pointing.menu {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  text-shadow: 1px 1px #343033;
+  background-color: #488bf4;
+  font-family: "Supercell-magic-webfont", "Georgia", serif !important; }
 
 .ui.secondary.pointing.menu a.item {
   color: white; }
 
 .ui.secondary.pointing.menu a.item:hover {
   color: #feb252; }
-
-.ui.secondary.pointing.menu {
-  background-color: #488bf4;
-  border-bottom: 2px solid #afafaf; }
-
-.ui.secondary.pointing.menu {
-  font-family: "Supercell-magic-webfont", "Georgia", serif !important; }
 
 /* Card layout */
 .ui.card > .image, .ui.cards > .card > .image {
@@ -85,7 +81,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Footer */
 footer.footer {
   font-family: "Supercell-magic-webfont", "Georgia", serif !important;
-  color: #858585; }
+  color: #858585;
+  padding: 20px !important;
+  margin: 1em 0 !important; }
 
 /* Decks */
 .background {
@@ -119,7 +117,8 @@ footer.footer {
   left: 0;
   width: 100%;
   text-align: center;
-  color: #feb252; }
+  color: #feb252;
+  text-shadow: 2px 2px #343033; }
 
 .background-image-text.title {
   top: 50px; }
@@ -136,5 +135,12 @@ footer.footer {
 .decks {
   background-image: url("/images/arena2.jpg");
   background-size: cover; }
+
+.main {
+  display: flex;
+  flex-direction: column; }
+
+.main-content {
+  flex: 1 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

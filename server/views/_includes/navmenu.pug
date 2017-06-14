@@ -1,10 +1,10 @@
 div.ui.secondary.pointing.menu.yellow
-  a.item(class=(title === 'Homepage' ? 'active' : ''), href='/') Home
-  a.item(class=(title === 'Card List' ? 'active' : ''), href='/cards?page=0&limit=8') Cards
-  a.item(class=(title === 'Decks' ? 'active' : ''), href='/decks') Decks
-  a.item(class=(title === 'Leagues' ? 'active' : ''), href='/leagues') Leagues
-  a.item(class=(title === 'Chests' ? 'active' : ''), href='/chests') Chests
-  a.item(class=(title === 'Players' ? 'active' : ''), href='/players') Players
-  a.item(class=(title === 'About' ? 'active' : ''), href='/about') About
+  a.item(class=(pageHeader.title === 'Homepage' ? 'active' : ''), href='/') Home
+  a.item(class=(pageHeader.title === 'Card List' ? 'active' : ''), href='/cards?page=0&limit=8') Cards
+  a.item(class=(pageHeader.title === 'Decks' ? 'active' : ''), href='/decks') Decks
+  a.item(class=(pageHeader.title === 'Leagues' ? 'active' : ''), href='/leagues') Leagues
+  a.item(class=(pageHeader.title === 'Chests' ? 'active' : ''), href='/chests') Chests
+  a.item(class=(pageHeader.title === 'Players' ? 'active' : ''), href='/players') Players
+  a.item(class=(pageHeader.title === 'About' ? 'active' : ''), href='/about') About
   div.right.menu
     a.ui.item Login

@@ -6,9 +6,11 @@ html
     link(rel="stylesheet", href="/vendor/semantic/public/vendor/dist/semantic.min.css")
     link(rel='stylesheet', href='/stylesheets/style.css')
 
-  body
+  body.main
     include _includes/navmenu
-    block content
+
+    div.main-content
+      block content
 
     footer.ui.grid.centered.footer
       p Made with ♥️ - André Varandas
