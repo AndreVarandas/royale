@@ -30,4 +30,4 @@ node_modules
 npm-debug.log
 
 # Semantic UI
-/public/semantic/dist/
+semantic/dist/
