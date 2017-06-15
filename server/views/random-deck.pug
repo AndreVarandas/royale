@@ -1,0 +1,15 @@
+extends layout
+
+include _includes/cardsHTMLExtensions
+
+block content
+  div.background.short.players
+    div.blur
+  h1.background-image-text.title.short= pageHeader.title
+  h4.background-image-text.text.short= pageHeader.subtitle
+
+  div.centered.grid.stackable.ui
+    h4.title Random Deck
+
+  div.ui.doubling.stackable.grid.container
+    +renderCardsCollection(cards, true)

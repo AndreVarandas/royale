@@ -1,7 +1,7 @@
-mixin renderCardsCollection(cards)
+mixin renderCardsCollection(cards, hideDetail)
   each card in cards
     div.four.wide.column
-      +renderCard(card)
+      +renderCard(card, hideDetail)
 
 
 mixin createPagination(pages)
@@ -14,7 +14,7 @@ mixin createPagination(pages)
       - }
 
 
-mixin renderCard(card)
+mixin renderCard(card, hideDetail)
   div.ui.card
     div.content
       div.header.ui.center.aligned.grid.card-name
@@ -22,24 +22,17 @@ mixin renderCard(card)
     div.image.card-image-container
       a(href='/cards/' + card.idName, title='Details')
         img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png').card-image
-    div.content-detail
-      div.ui.grid
-        div.seven.wide.column.card-options
-          i.elixir.icon
-          span.detail-label x #{card.elixirCost}
-        div.seven.wide.column.card-options
-          a(title='Add to deck').right.aligned
-            i.add.circle.icon.button
-    div.extra.content
-      span.left.floated
-        a(title='Vote up')
-          i.arrow.circle.outline.up.icon
-          | Upvote
-      span.right.floated
-        a(title='Vote Down')
-          i.arrow.circle.outline.down.icon
-          | Downvote
 
+    unless hideDetail    
+      div.content-detail
+        div.ui.grid
+          div.seven.wide.column.card-options
+            i.elixir.icon
+            span.detail-label x #{card.elixirCost}
+
+          div.seven.wide.column.card-options
+            a(title='Add to deck').right.aligned
+              i.add.circle.icon.button
 
 mixin renderCardWithDetail(card)
   div.ui.grid.stackable
@@ -57,34 +50,3 @@ mixin renderCardWithDetail(card)
       div.content.ui.grid
         h5.twelve.wide.column Description:
         p= card.description
-
-
-
-//- mixin renderCardWithDetail(card)
-//-   div.ui.card
-//-     div.image
-//-       img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png')
-//-     div.content
-//-       div.header.ui.center.aligned.grid.card-name
-//-         a(href='/cards/' + card.idName)=card.name
-//-       div.content-detail
-//-         div.ui.grid
-//-           div.seven.wide.column.card-options
-//-             i.elixir.icon
-//-             span.detail-label x #{card.elixirCost}
-//-           div.seven.wide.column.card-options
-//-             a(title='Add to deck').right.aligned
-//-               i.cards.icon
-//-       div.meta
-//-         span.date=card.type
-//-       div.description= card.description
-//-     div.extra.content
-//-       div.ui.grid.doubling.stackable
-//-         a(title='Rarity').five.wide.column.small.text
-//-           i.empty.star.icon
-//-           =card.rarity
-//-         a(title='Elixir Cost').five.wide.column
-//-           i.money.icon
-//-           =card.elixirCost
-//-         a(title='Arena').five.wide.column
-//-           i.ticket.icon

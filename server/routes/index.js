@@ -4,6 +4,7 @@ var router = express.Router();
 const ctrlPage = require('../controllers/page');
 const ctrlCards = require('../controllers/cards');
 const ctrlDecks = require('../controllers/decks');
+const ctrlRandomDeck = require('../controllers/randomDeck');
 const ctrlLeagues = require('../controllers/leagues');
 const ctrlChests = require('../controllers/chests');
 const ctrlPlayers = require('../controllers/players');
@@ -20,6 +21,9 @@ router.get('/cards/:cardId', ctrlCards.getOneCard);
 
 /** GET Decks page */
 router.get('/decks', ctrlDecks.getDecks);
+
+/** GET Random Deck page */
+router.get('/random', ctrlRandomDeck.index);
 
 /** GET Leagues Page */
 router.get('/leagues', ctrlLeagues.index);
