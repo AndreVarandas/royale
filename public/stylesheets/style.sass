@@ -56,16 +56,21 @@ footer > p.small,
   a
     color: black
 
-.card-options
-  display: flex !important;
-  align-items: center;
-  justify-content: flex-end
+.type,
+.rarity
+  color: $secondary-font-color
+  font-family: $secondary-font
+
+p.type,
+p.rarity
+  margin: 0.25em 0 !important
 
 .small.text
   font-size: 0.75em
 
 .card-image-container
   text-align: center
+  margin: -10px 0px 20px 0px
 
 .card-image
   max-width: 45%
@@ -98,12 +103,6 @@ footer > p.small,
 
 .icon
   font-family: $secondary-font
-
-.content-detail
-  margin: 1em 0
-  .detail-label
-    vertical-align: top
-    font-family: $brand-font
 
 /* Background Styling */
 .background
@@ -178,3 +177,17 @@ footer > p.small,
 
 .pushup
   margin-top: -60px !important
+.pushup.higher
+  margin-top: -100px !important
+
+/* Homepage */
+.home
+  text-align: center
+
+.home img
+  max-width: 60% !important
+  margin: 1.5em 0
+
+.home > .detail
+  text-shadow: none
+  color: $secondary-font-color

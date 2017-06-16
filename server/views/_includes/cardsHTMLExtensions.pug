@@ -1,7 +1,7 @@
-mixin renderCardsCollection(cards, hideDetail)
+mixin renderCardsCollection(cards)
   each card in cards
     div.four.wide.column
-      +renderCard(card, hideDetail)
+      +renderCard(card)
 
 
 mixin createPagination(pages)
@@ -14,24 +14,26 @@ mixin createPagination(pages)
       - }
 
 
-mixin renderCard(card, hideDetail)
+mixin renderCard(card)
   div.ui.card
     div.content
       div.header.ui.center.aligned.grid.card-name
         a(href='/cards/' + card.idName)=card.name
+        p.small.text.type= card.type
     div.image.card-image-container
       a(href='/cards/' + card.idName, title='Details')
         img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png').card-image
+        p.small.text.rarity= card.rarity
 
-    unless hideDetail    
-      div.content-detail
-        div.ui.grid
-          div.seven.wide.column.card-options
-            i.elixir.icon
-            span.detail-label x #{card.elixirCost}
+    unless hideDetail
+      div.extra.content
+        div.ui.two.column.grid
+          div.column
+            i.elixir.icon.left.floated
+            span.left.floated x #{card.elixirCost}
 
-          div.seven.wide.column.card-options
-            a(title='Add to deck').right.aligned
+          div.column
+            a(title='Add to deck').right.floated
               i.add.circle.icon.button
 
 mixin renderCardWithDetail(card)
@@ -50,3 +52,18 @@ mixin renderCardWithDetail(card)
       div.content.ui.grid
         h5.twelve.wide.column Description:
         p= card.description
+
+mixin renderTotalElixirCost
+  - let i = 0
+  each card in cards
+    - i += parseInt(card.elixirCost)
+  - i = (i / 8).toFixed(1);
+  = i
+
+mixin renderTotalCardType(cards, type)
+  - let cardsOfType = 0
+  each card in cards
+    - if (card.type === type) {
+      - cardsOfType++
+    - }
+  = cardsOfType

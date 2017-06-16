@@ -22,6 +22,6 @@ router.get('/players', ctrlPlayers.index)
 router.get('/chests', ctrlChests.index);
 
 /** Leagues */
-router.get('/leagues', ctrlChests.index);
+router.get('/leagues', ctrlLeagues.index);
 
 module.exports = router;

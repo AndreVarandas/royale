@@ -54,16 +54,21 @@ footer > p.small {
   .card-name a {
     color: black; }
 
-.card-options {
-  display: flex !important;
-  align-items: center;
-  justify-content: flex-end; }
+.type,
+.rarity {
+  color: #858585;
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+p.type,
+p.rarity {
+  margin: 0.25em 0 !important; }
 
 .small.text {
   font-size: 0.75em; }
 
 .card-image-container {
-  text-align: center; }
+  text-align: center;
+  margin: -10px 0px 20px 0px; }
 
 .card-image {
   max-width: 45%;
@@ -96,12 +101,6 @@ footer > p.small {
 
 .icon {
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif; }
-
-.content-detail {
-  margin: 1em 0; }
-  .content-detail .detail-label {
-    vertical-align: top;
-    font-family: "Supercell-magic-webfont", "Georgia", serif !important; }
 
 /* Background Styling */
 .background {
@@ -176,5 +175,20 @@ footer > p.small {
 
 .pushup {
   margin-top: -60px !important; }
+
+.pushup.higher {
+  margin-top: -100px !important; }
+
+/* Homepage */
+.home {
+  text-align: center; }
+
+.home img {
+  max-width: 60% !important;
+  margin: 1.5em 0; }
+
+.home > .detail {
+  text-shadow: none;
+  color: #858585; }
 
 /*# sourceMappingURL=style.css.map */

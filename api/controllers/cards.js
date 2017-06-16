@@ -2,23 +2,13 @@ const trae = require('trae');
 const clashapiFactory = require('clashapi/factory');
 
 const clashapi = clashapiFactory(trae);
+const util = require('../../utils/util');
 
 /**
  * Util Functions and Constants
  */
 const MAX_RESULTS = 8;
 
-/**
- * Sets status code and responds content as json
- *
- * @param {Object} res
- * @param {Number} status
- * @param {Object} content
- */
-const sendJsonResponse = (res, status, content) => {
-  res.status(status);
-  res.json(content);
-};
 
 
 /**
@@ -47,7 +37,7 @@ const processQueryParams = (req) => {
  * @param {Object} next
  */
 module.exports.index = (req, res, next) => {
-  sendJsonResponse(res, 200, { availableEndpoints: {'/cards': 'getAllCards', '/cards/:cardId': 'getOneCard' }});
+  util.sendJsonResponse(res, 200, { availableEndpoints: {'/cards': 'getAllCards', '/cards/:cardId': 'getOneCard' }});
 };
 
 
@@ -69,7 +59,7 @@ module.exports.getAllCards = (req, res, next) => {
       cardsCount = cards.length;
       skip = queryParams.page * queryParams.limit;
       cardsToSend = cards.slice(skip, skip + queryParams.limit);
-      sendJsonResponse(res, 200, {
+      util.sendJsonResponse(res, 200, {
           cards: cardsToSend,
           pages: {
             total: Math.round(cards.length / queryParams.limit),
@@ -91,6 +81,6 @@ module.exports.getAllCards = (req, res, next) => {
 module.exports.getOneCard = (req, res, next) => {
   clashapi.cards(req.params.cardId)
     .then((card) => {
-      sendJsonResponse(res, 200, card);
+      util.sendJsonResponse(res, 200, card);
     });
 }
