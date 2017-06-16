@@ -8,21 +8,20 @@ block content
   h1.background-image-text.title= pageHeader.title
   h4.background-image-text.text= pageHeader.subtitle
 
-  div.ui.page.grid.segment.container.pushup.higher
-    div.ui.three.column.grid
-      div.row
-        div.column.home
-          h3 Cards
-          a(href='/cards')
-            img(class='card-image' src='http://www.clashapi.xyz/images/cards/princess.png')
-          p.detail Listing of all available cards.
-        div.column.home
-          h3 Decks
-          a(href='/decks')
-            img(class='card-image' src='http://www.clashapi.xyz/images/cards/lumberjack.png')
-          p.detail Check out user decks.
-        div.column.home
-          h3 Random Deck
-          a(href='/random')
-            img(class='card-image' src='http://www.clashapi.xyz/images/cards/the-log.png')
-          p.detail Get a random deck!
+  div.content.pushup.higher.container
+    div.card.row
+      div.col.s4.home
+        h3 Cards
+        a(href='/cards')
+          img(class='card-image' src='http://www.clashapi.xyz/images/cards/princess.png')
+        p.detail Listing of all available cards.
+      div.col.s4.home
+        h3 Decks
+        a(href='/decks')
+          img(class='card-image' src='http://www.clashapi.xyz/images/cards/lumberjack.png')
+        p.detail Check out user decks.
+      div.col.s4.home
+        h3 Random Deck
+        a(href='/random')
+          img(class='card-image' src='http://www.clashapi.xyz/images/cards/the-log.png')
+        p.detail Get a random deck!

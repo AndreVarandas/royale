@@ -5,13 +5,14 @@ mixin renderCardsCollection(cards)
 
 
 mixin createPagination(pages)
-  div.content.row
-    div.ui.pagination.menu
-      - for (var i = 0; i < pages.total; ++i) {
-        a(class=(pages.currentPage === i ? 'active item' : 'item'),
-          href=`/cards?page=${i}&limit=${pages.limit}`
-          )= i+1
-      - }
+  - if (pages.total && pages.total > 0) {
+    div.content.row
+      ul.pagination
+        - for (var i = 0; i < pages.total; ++i) {
+          li(class=(pages.currentPage === i ? 'active' : 'waves-effect'))
+            a(href=`/cards?page=${i}&limit=${pages.limit}`)= i+1
+        - }
+  - }
 
 
 mixin renderCard(card)

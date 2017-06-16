@@ -1,8 +1,9 @@
 doctype html
 html
   head
+    title= `${pageHeader.title} | Royal Deck Builder`
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel="stylesheet", href="/dist/semantic.min.css")
+    link(rel="stylesheet", href="/vendor/materialize/dist/css/materialize.min.css")
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='apple-touch-icon', sizes='57x57' href='/images/app/apple-icon-57x57.png')
     link(rel='apple-touch-icon', sizes='60x60' href='/images/app/apple-icon-60x60.png/')
@@ -21,7 +22,7 @@ html
     meta(name='msapplication-TileColor' content='#ffffff')
     meta(name='msapplication-TileImage' content='/images/app/ms-icon-144x144.png')
     meta(name='theme-color' content='#ffffff')
-    //- title= `${pageHeader.title} | Royal Deck Builder`
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
 
   body.main
     include _includes/navmenu
@@ -29,9 +30,13 @@ html
     div.main-content
       block content
 
-    footer.ui.grid.centered.footer
-      p.ui.row Made with ♥️ - André Varandas
-      p.ui.row.small This content is not affiliated with, endorsed, sponsored, or specifically approved by Supercell and Supercell is not responsible for it. For more information see Supercell’s Fan Content Policy:
-        a(href='http://www.supercell.com/fan-content-policy', target='_blank') www.supercell.com/fan-content-policy.
+    footer.footer.center-align
+      div.row
+        div.col.s12
+          p Made with ♥️ - André Varandas
+      div.row
+        div.col.s12
+          p.small This content is not affiliated with, endorsed, sponsored, or specifically approved by Supercell and Supercell is not responsible for it. For more information see Supercell’s Fan Content Policy:
+            a(href='http://www.supercell.com/fan-content-policy', target='_blank') www.supercell.com/fan-content-policy.
     script(src='https://code.jquery.com/jquery-3.1.1.min.js')
-    script(src="/dist/semantic.min.js")
+    script(src="/vendor/materialize/dist/js/materialize.min.js")

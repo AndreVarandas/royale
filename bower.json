@@ -1,0 +1,22 @@
+{
+  "name": "royale",
+  "description": "",
+  "main": "",
+  "authors": [
+    "André Varandas <andre.m.varandas@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/AndreVarandas/royale",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.98.2"
+  }
+}

@@ -10,6 +10,24 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Supercell-magic-webfont", "Georgia", serif !important; }
 
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.17em; }
+
+h4 {
+  font-size: 1.12em; }
+
+h5 {
+  font-size: .83em; }
+
+h6 {
+  font-size: .75em; }
+
 .main {
   display: flex;
   flex-direction: column; }
@@ -27,22 +45,20 @@ footer.footer {
   padding: 20px !important;
   margin: 1em 0 !important; }
 
-footer > p.small {
+footer p.small {
   color: #858585;
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif; }
 
 /* Nav */
-.ui.secondary.pointing.menu {
-  margin-bottom: 0;
+nav {
   text-shadow: 1px 1px #343033;
   background-color: #488bf4;
   font-family: "Supercell-magic-webfont", "Georgia", serif !important; }
 
-.ui.secondary.pointing.menu a.item {
-  color: white; }
-
-.ui.secondary.pointing.menu a.item:hover {
-  color: #feb252; }
+nav li.active a,
+nav li.active a:hover {
+  color: #feb252;
+  border-bottom: 2px solid #feb252; }
 
 /* Card layout */
 .ui.card > .image, .ui.cards > .card > .image {

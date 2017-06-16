@@ -12,6 +12,19 @@ html, body
 h1, h2, h3, h4, h5, h6,
   font-family: $brand-font
 
+h1
+  font-size: 2em
+h2
+  font-size: 1.5em
+h3
+  font-size: 1.17em
+h4
+  font-size: 1.12em
+h5
+  font-size: .83em
+h6
+ font-size: .75em
+
 .main
   display: flex
   flex-direction: column
@@ -29,22 +42,20 @@ footer.footer
   padding: 20px !important
   margin: 1em 0 !important
 
-footer > p.small,
+footer p.small,
   color: $secondary-font-color
   font-family: $secondary-font
 
 /* Nav */
-.ui.secondary.pointing.menu
-  margin-bottom: 0
+nav
   text-shadow: 1px 1px #343033
   background-color: $main-color
   font-family: $brand-font
 
-.ui.secondary.pointing.menu a.item
-  color: white
-
-.ui.secondary.pointing.menu a.item:hover
+nav li.active a,
+nav li.active a:hover
   color: $secondary-color
+  border-bottom: 2px solid $secondary-color
 
 /* Card layout */
 .ui.card>.image, .ui.cards>.card>.image
