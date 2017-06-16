@@ -10,7 +10,6 @@ const util = require('../../utils/util');
 const MAX_RESULTS = 8;
 
 
-
 /**
  * Decomposes required query string parameters
  *

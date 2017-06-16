@@ -5,3 +5,43 @@ block content
     div.blur
   h1.background-image-text.title= pageHeader.title
   h4.background-image-text.text= pageHeader.subtitle
+
+  div.container.ui.row
+    div.ui.segment.pushup.higher
+      div.ui.page.segmented
+        div.ui.relaxed.divided.list
+          each player in players
+            div.item
+              div.content.players-detail
+                div.ui.three.column.grid
+                  div.row
+                    div.column
+                      h5.players-header= `Level ${player.level}`
+                      div.players-description
+                        i.protect.icon
+                        span XP:
+                        = ` ${player.maxExp}`
+                    div.column
+                      h5.players-header Arena Towers
+                      div.players-description
+                        i.full.heart.icon
+                        span HP:
+                        = ` ${player.arenaTowers.hitpoints}`
+                        i.bomb.icon
+                        span DMG:
+                        = ` ${player.arenaTowers.damage}`
+                    div.column
+                      h5.players-header King's Tower
+                      div.players-description
+                        i.full.heart.icon
+                        span HP:
+                        = ` ${player.kingsTower.hitpoints}`
+                        i.bomb.icon
+                        span DMG:
+                        = ` ${player.kingsTower.damage}`
+
+      .separator
+      div.container.ui.center.aligned
+        h4 Note:
+        p Arena towers hitspeed and is always 0.8, and range is 7.5.
+        p King's Tower hitspeed is 1 and range is 7.
