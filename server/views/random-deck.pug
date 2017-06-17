@@ -12,20 +12,18 @@ block content
     +renderCardsCollection(cards)
 
   div.row
-    h2 Random Deck Stats:
+    h2.text-centered Random Deck Stats:
 
-  div.ui.segment.page.content.container.stackable
-    div.ui.four.column.grid
-      div.row
-        div.column
-          | Total elixir cost:
-          +renderTotalElixirCost(cards)
-        div.column
-          | Total troops:
-          +renderTotalCardType(cards, 'Troop')
-        div.column
-          | Total spells:
-          +renderTotalCardType(cards, 'Spell')
-        div.column
-          | Total buildings:
-          +renderTotalCardType(cards, 'Building')
+  div.row.container
+    div.col.s3
+      p Elixir cost:
+        +renderTotalElixirCost(cards)
+    div.col.s3
+      p Troops:
+        +renderTotalCardType(cards, 'Troop')
+    div.col.s3
+      p Spells:
+        +renderTotalCardType(cards, 'Spell')
+    div.col.s3
+      p Buildings:
+        +renderTotalCardType(cards, 'Building')
