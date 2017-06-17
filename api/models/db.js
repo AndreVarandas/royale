@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 require('./deck');
 
-const dbURI = 'mongodb://localhost/royale';
-if (process.env.NODE_ENV === 'production')
-  dbURI = process.env.MONGOLAB_URI;
+let dbURI = 'mongodb://localhost/royale';
+// if (process.env.NODE_ENV === 'production')
+//   dbURI = process.env.MONGOLAB_URI;
 
 /** Create new connection */
 mongoose.connect(dbURI);
