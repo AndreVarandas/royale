@@ -1,58 +1,67 @@
 mixin renderCardsCollection(cards)
-  each card in cards
-    div.four.wide.column
-      +renderCard(card)
-
+  div.row
+    each card in cards
+      div.col.m3.s6
+        +renderCard(card)
 
 mixin createPagination(pages)
   - if (pages.total && pages.total > 0) {
     div.content.row
-      ul.pagination
+      ul.pagination.col.s12.m6.offset-m3.text-centered
         - for (var i = 0; i < pages.total; ++i) {
           li(class=(pages.currentPage === i ? 'active' : 'waves-effect'))
             a(href=`/cards?page=${i}&limit=${pages.limit}`)= i+1
         - }
   - }
 
-
 mixin renderCard(card)
-  div.ui.card
-    div.content
-      div.header.ui.center.aligned.grid.card-name
+  div.card.text-centered
+    div.card-content
+      div.card-name
         a(href='/cards/' + card.idName)=card.name
         p.small.text.type= card.type
-    div.image.card-image-container
-      a(href='/cards/' + card.idName, title='Details')
-        img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png').card-image
-        p.small.text.rarity= card.rarity
-
-    unless hideDetail
-      div.extra.content
-        div.ui.two.column.grid
-          div.column
-            i.elixir.icon.left.floated
-            span.left.floated x #{card.elixirCost}
-
-          div.column
-            a(title='Add to deck').right.floated
-              i.add.circle.icon.button
+      div.image.card-image-container
+        a(href='/cards/' + card.idName, title='Details')
+          img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png', style=(card.rarity == 'Legendary' ? 'max-height: 118.16px' : '')).card-image
+          p.small.text.rarity= card.rarity
+      div.card-action
+        div.col.s12
+          i.elixir.custom-icon
+          span.custom-icon-label x #{card.elixirCost}
 
 mixin renderCardWithDetail(card)
-  div.ui.grid.stackable
-    div.four.wide.column
+  div.col.s12.card
+    div.col.s4
       img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png', class='card-image-detail')
-    div.twelve.wide.column
+    div.col.s8
       h2.card-info-name= card.name
-      div.content.ui.grid
-        div.five.column.row
-          div.left.floated.column
-            p.text-faded= `${card.type} - ${card.rarity}`
-          div.right.floated.column
-            p.text-faded Cost: #{card.elixirCost}
-              i.elixir.icon.card-detail
-      div.content.ui.grid
-        h5.twelve.wide.column Description:
-        p= card.description
+      div.row
+        div.col.s6
+          p.text-faded= `${card.type} - ${card.rarity}`
+        div.col.s6.offset-6
+          P.right-align
+            i.elixir.custom-icon
+            span.custom-icon-label.text-faded x #{card.elixirCost}
+      div.row
+        div.col.s12
+          h5 Description:
+          p= card.description
+
+  //- div.ui.grid.stackable
+  //-   div.four.wide.column
+  //-     img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png', class='card-image-detail')
+  //-   div.twelve.wide.column
+  //-     h2.card-info-name= card.name
+  //-     div.content.ui.grid
+  //-       div.five.column.row
+  //-         div.left.floated.column
+  //-           p.text-faded= `${card.type} - ${card.rarity}`
+  //-         div.right.floated.column
+  //-           p.text-faded Cost: #{card.elixirCost}
+  //-             i.elixir.icon.card-detail
+  //-     div.content.ui.grid
+  //-       h5.twelve.wide.column Description:
+  //-       p= card.description
 
 mixin renderTotalElixirCost
   - let i = 0

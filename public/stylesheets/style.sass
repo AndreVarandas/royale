@@ -57,11 +57,32 @@ nav li.active a:hover
   color: $secondary-color
   border-bottom: 2px solid $secondary-color
 
-/* Card layout */
-.ui.card>.image, .ui.cards>.card>.image
-  background-color: transparent
+@media only screen and (min-width: 601px)
+  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i
+    height: 45px
+    line-height: 45px
 
+.side-nav
+  background-color: $main-color
+.side-nav li>a
+  color: white
+.side-nav li>a:hover
+  color: $secondary-color
+
+/* Pagination */
+.pagination li.active
+  background-color: $main-color
+  color: $secondary-color
+.pagination li a
+  font-family: $brand-font
+  font-size: 1em
+
+
+/* Card layout */
 .card-name
+  min-height: 63px
+  max-height: 63px
+  height: 63px
   font-family: $brand-font
   margin-bottom: 1em !important
   a
@@ -76,6 +97,10 @@ p.type,
 p.rarity
   margin: 0.25em 0 !important
 
+p.small.text.type,
+p.small.text.rarity
+  color: $secondary-font-color
+
 .small.text
   font-size: 0.75em
 
@@ -84,12 +109,12 @@ p.rarity
   margin: -10px 0px 20px 0px
 
 .card-image
-  max-width: 45%
+  max-width: 60%
   margin: auto
 
 .card-image-detail
   max-width: 65%
-  margin: auto
+  margin: 2em
 
 .card-image:hover,
 .card-image-detail:hover
@@ -100,13 +125,15 @@ p.rarity
   color: $main-font-color
 
 /* Icons */
+.custom-icon
+  font-size: 0
+.custom-icon-label
+  vertical-align: sub
+  margin: 0 0.25em
 .elixir
   background-image: url('/images/Elixir.png')
   background-size: cover
-  padding: 10px
-
-.elixir.icon.card-detail
-  margin: 0 10px -3px 10px
+  padding: 8px
 
 .add.circle.icon.button
   color: #cd14d9
@@ -197,6 +224,9 @@ p.rarity
 .separator
   margin: 2em 0
   border-top: 1px solid $secondary-font-color
+
+.text-centered
+  text-align: center !important
 
 
 /* Homepage */
