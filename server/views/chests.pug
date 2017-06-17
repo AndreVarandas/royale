@@ -1,7 +1,16 @@
 extends layout
 
+include _includes/cardsHTMLExtensions
+
 block content
   div.background.chests
     div.blur
   h1.background-image-text.title= pageHeader.title
   h4.background-image-text.text= pageHeader.subtitle
+
+  div.container.row.pushup.higher
+    div.card
+      div.card.title
+        h4 Chest level
+      div.card-content
+      h4= maxArenaLevel

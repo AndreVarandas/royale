@@ -264,7 +264,8 @@ p.small.text.rarity {
   margin: 1em 0; }
 
 .players-description span {
-  color: #858585; }
+  color: #858585;
+  margin: 0 1em 0 0; }
 
 .players-description i {
   margin: 0 0.5em; }

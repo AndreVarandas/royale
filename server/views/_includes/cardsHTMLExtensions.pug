@@ -47,22 +47,6 @@ mixin renderCardWithDetail(card)
           h5 Description:
           p= card.description
 
-  //- div.ui.grid.stackable
-  //-   div.four.wide.column
-  //-     img(src='http://www.clashapi.xyz/images/cards/' + card.idName + '.png', class='card-image-detail')
-  //-   div.twelve.wide.column
-  //-     h2.card-info-name= card.name
-  //-     div.content.ui.grid
-  //-       div.five.column.row
-  //-         div.left.floated.column
-  //-           p.text-faded= `${card.type} - ${card.rarity}`
-  //-         div.right.floated.column
-  //-           p.text-faded Cost: #{card.elixirCost}
-  //-             i.elixir.icon.card-detail
-  //-     div.content.ui.grid
-  //-       h5.twelve.wide.column Description:
-  //-       p= card.description
-
 mixin renderTotalElixirCost
   - let i = 0
   each card in cards
@@ -77,3 +61,9 @@ mixin renderTotalCardType(cards, type)
       - cardsOfType++
     - }
   = cardsOfType
+
+//- Chests
+
+mixin renderChestArenas(chests)
+  each chest in chests
+    div= chest.arena

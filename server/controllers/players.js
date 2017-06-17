@@ -7,7 +7,7 @@ module.exports.index = (req, res, next) => {
       res.status(200).render('players', {
         pageHeader: {
           title: 'Players',
-          subtitle: 'Players levels, experience and tower info.'
+          subtitle: 'Experience, archer towers and kings tower info.'
         },
         players: response.data.players
       });
