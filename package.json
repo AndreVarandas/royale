@@ -18,5 +18,9 @@
     "semantic-ui": "^2.2.10",
     "serve-favicon": "~2.3.2",
     "trae": "^1.4.2"
+  },
+   "engines": {
+    "node": "~7.4.0",
+    "npm": "~4.0.5"
   }
 }
