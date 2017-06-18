@@ -1,4 +1,4 @@
 module.exports = {
   baseURL: 'http://www.clashapi.xyz',
-  baseLocalURL: 'http://localhost:3000/api/v1'
+  baseLocalURL: process.env.NODE_ENV === 'production' ? `https://${process.env.HEROKU_APP_NAME}.herokuapp.com` : 'http://localhost:3000/api/v1'
 }
