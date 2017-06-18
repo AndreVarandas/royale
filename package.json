@@ -13,12 +13,13 @@
     "express": "~4.14.1",
     "mongoose": "^4.10.5",
     "morgan": "~1.7.0",
+    "node-sass": "^4.5.3",
     "node-sass-middleware": "0.9.8",
     "pug": "~2.0.0-beta10",
     "serve-favicon": "~2.3.2",
     "trae": "^1.4.2"
   },
-   "engines": {
+  "engines": {
     "node": "~7.4.0",
     "npm": "~4.0.5"
   }
