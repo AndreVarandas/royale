@@ -47,7 +47,8 @@ footer.footer {
 
 footer p.small {
   color: #858585;
-  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif; }
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 0.9rem; }
 
 /* Nav */
 nav {
@@ -196,6 +197,10 @@ p.small.text.rarity {
 .background-image-text.text.short {
   top: 110px; }
 
+/* Hack - Remove */
+h6.background-image-text.text {
+  top: 190px; }
+
 .arena {
   background-image: url("/images/arena2.jpg");
   background-size: cover; }
@@ -241,7 +246,7 @@ p.small.text.rarity {
   text-align: center; }
 
 .home img {
-  max-width: 60% !important;
+  max-width: 30% !important;
   margin: 1.5em 0; }
 
 .home > .detail {
