@@ -12,6 +12,14 @@ This is intended to be a Clash Royale deck maker - so far it we can:
 - A deck and card voting system.
 - Refactor `api` so we can use it later, when build the app for iOS and Android.
 
+### Play with it
+You can see it running live at [https://royaledecks.herokuapp.com/](https://royaledecks.herokuapp.com/) - (this is running on a free server, so it may take a while to load.)
+
+You can also clone this repository and run it with:
+
+`$ git clone https://github.com/AndreVarandas/royale.git`
+
+`$ npm install && npm start`
 
 #### Credits to [Martin Carrera](https://github.com/martincarrera)
 For building the api, you can check it out [here](https://github.com/martincarrera/clash-royale-api).
