@@ -3,8 +3,13 @@
 This is intended to be a Clash Royale deck maker - so far it we can:
 
 1. Get a nice list with all the cards of the game and details about it.
+
+![Card list](assets/ss2.png)
+
 2. Info about Arena and King Towers. (Damage speed etc);
 3. Generate a random deck
+
+![Random Deck](assets/ss1.png)
 
 ### TODO:
 - Add a new view so users are able to create a new deck, picking cards and then saving it.
